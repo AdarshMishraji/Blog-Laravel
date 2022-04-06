@@ -11,12 +11,27 @@
                 <li class="pb-1">
                     <a href="/blog">Blog</a>
                 </li>
-                <li class="pb-1">
-                    <a href="/login">Login</a>
-                </li>
-                <li class="pb-1">
-                    <a href="/register">Register</a>
-                </li>
+                @guest
+                    <li class="pb-1">
+                        <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                        <li class="pb-1">
+                            <a href="/register">Register</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="pb-1">
+                        <span>{{ Auth::user()->name }}</span>
+                        <a href="{{ route('logout') }}" class="no-underline hover:underline"
+                            onclick="event.preventDefault();
+                                                                                                                                    document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                @endguest
+
                 <li class="pb-1">
                     <a href="/aboutus">About us</a>
                 </li>

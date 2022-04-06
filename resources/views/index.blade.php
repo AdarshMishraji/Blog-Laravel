@@ -15,13 +15,17 @@
                 </a>
             </div>
         </div>
-        <p class="ml-20 font-bold text-3xl text-white">Recent Blogs</p>
+        @if (isset($posts) && count($posts) > 0)
+            <p class="ml-20 font-bold text-3xl text-white">Recent Blogs</p>
+        @else
+            <div class="h-56"></div>
+        @endif
         <div class="flex items-center flex-row w-full overflow-auto hide-scrollbar">
             @foreach ($posts as $post)
                 <a class="m-10 shadow-2xl" style="min-width: 500px;" href="/blog/{{ $post->slug }}">
                     <div class="bg-white rounded-t-3xl flex justify-center">
                         <img src="{{ asset('images/uploadedImages/' . $post->image_path) }}" alt=""
-                            class="object-contain h-56 w-auto">
+                            class="object-contain h-60 w-auto rounded-t-3xl py-5">
                     </div>
                     <div class='bg-gray-400 p-6 rounded-b-3xl'>
                         <p class="font-bold text-lg pb-2">{{ $post->title }}</p>
@@ -29,9 +33,11 @@
                     </div>
                 </a>
             @endforeach
-            <div class='h-full flex items-center justify-center px-10 mr-10'>
-                <a class="text-xl text-white whitespace-no-wrap hover:underline" href="/blog"> Read More </a>
-            </div>
+            @if (isset($posts) && count($posts) > 3)
+                <div class='h-full flex items-center justify-center px-10 mr-10'>
+                    <a class="text-xl text-white whitespace-no-wrap hover:underline" href="/blog"> Read More </a>
+                </div>
+            @endif
         </div>
     </div>
 @endsection

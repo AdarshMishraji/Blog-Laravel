@@ -13,10 +13,10 @@
             <form action="/blog/{{ $post->slug }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-                <input type="text" name="title" value={{ $post->title }}
-                    class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none">
+                <input type="text" name="title" value="{{ $post->title }}"
+                    class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none text-white">
 
-                <textarea name="description" class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none">{{ $post->description }}
+                <textarea name="description" class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none text-white">{{ $post->description }}
             </textarea>
 
                 <button type="submit"

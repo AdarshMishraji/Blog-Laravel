@@ -27,10 +27,10 @@
                 @csrf
 
                 <input type="text" name="title" placeholder="Title...."
-                    class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none">
+                    class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none text-white">
 
                 <textarea name="description" placeholder="Description....."
-                    class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea>
+                    class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none text-white"></textarea>
 
                 <div class="mt-20">
                     <label
