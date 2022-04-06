@@ -19,6 +19,10 @@ Route::get('/', [PagesController::class, 'index']);
 
 Route::resource('/blog', PostsController::class);
 
+Route::get('/aboutus', function(){
+    return view('aboutus');
+});
+
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
