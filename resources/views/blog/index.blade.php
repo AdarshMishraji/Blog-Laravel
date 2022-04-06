@@ -29,8 +29,8 @@
         @foreach ($posts as $post)
             <div class="gap-20 w-4/5 mx-auto my-10 py-15 bg-white rounded-3xl shadow-2xl px-10 flex flex-row items-center">
                 <div>
-                    <img src="{{ asset('images/' . $post->image_path) }}" alt="" width="500px" height="500px"
-                        class='object-cover rounded-3xl' />
+                    <img src="{{ asset('images/uploadedImages/' . $post->image_path) }}" alt="" width="500px"
+                        height="500px" class='object-cover rounded-3xl' />
                 </div>
                 <div>
                     <h2 class="text-gray-700 font-bold text-5xl pb-4">

@@ -20,7 +20,8 @@
             @foreach ($posts as $post)
                 <a class="m-10 shadow-2xl" style="min-width: 500px;" href="/blog/{{ $post->slug }}">
                     <div class="bg-white rounded-t-3xl flex justify-center">
-                        <img src="{{ asset('images/' . $post->image_path) }}" alt="" class="object-contain h-56 w-auto">
+                        <img src="{{ asset('images/uploadedImages/' . $post->image_path) }}" alt=""
+                            class="object-contain h-56 w-auto">
                     </div>
                     <div class='bg-gray-400 p-6 rounded-b-3xl'>
                         <p class="font-bold text-lg pb-2">{{ $post->title }}</p>

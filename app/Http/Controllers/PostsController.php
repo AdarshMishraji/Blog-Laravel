@@ -13,7 +13,7 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth',['except'=>['index','show']]);
+        $this->middleware('auth', ['except' => ['index', 'show']]);
     }
     /**
      * Display a listing of the resource.
@@ -55,7 +55,7 @@ class PostsController extends Controller
         );
         $newImageName = uniqid() . '-' . $request->title . '.' . $request->image->getClientOriginalExtension();
         // dd($newImageName);
-        $request->image->move(public_path('images'), $newImageName);
+        $request->image->move(public_path('images/uploadedImages'), $newImageName);
         $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
 
         Post::create([
@@ -122,7 +122,7 @@ class PostsController extends Controller
      */
     public function destroy($slug)
     {
-        $post=Post::where('slug',$slug);
+        $post = Post::where('slug', $slug);
         $post->delete();
         return redirect('/blog')->with('message', 'Your post has been Deleted!');
     }

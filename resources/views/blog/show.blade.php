@@ -10,7 +10,7 @@
         </div>
         <div class="w-4/5 my-10 mx-auto pt-10 bg-white rounded-2xl shadow-2xl px-10">
             <div class="flex justify-center">
-                <img src="{{ asset('images/' . $post->image_path) }}" alt="" width="500px" height="500px"
+                <img src="{{ asset('images/uploadedImages/' . $post->image_path) }}" alt="" width="500px" height="500px"
                     class="rounded-3xl object-cover">
             </div>
             <span class="text-gray-500">
