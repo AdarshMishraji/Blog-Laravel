@@ -1,10 +1,10 @@
-<footer class="bg-gray-800 py-20 mt-20">
-    <div class="sm:grid grid-cols-3 w-4/5 pb-10 m-auto border-b-2 border-gray-700">
+<footer class="from-indigo-700 bg-gradient-to-b  to-indigo-600 py-20">
+    <div class="sm:grid grid-cols-3 w-4/5 pb-10 m-auto border-b-2 border-indigo-700">
         <div>
             <h3 class="text-l sm:font-bold text-gray-100">
                 Pages
             </h3>
-            <ul class="py-4 sm:text-sm pt-4 text-gray-400">
+            <ul class="py-4 sm:text-sm pt-4 text-gray-200">
                 <li class="pb-1">
                     <a href="/">Home</a>
                 </li>
@@ -17,43 +17,8 @@
                 <li class="pb-1">
                     <a href="/register">Register</a>
                 </li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Find Us
-            </h3>
-            <ul class="py-4 sm:text-sm pt-4 text-gray-400">
                 <li class="pb-1">
-                    <a href="/">What we Do</a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">Address</a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">Phone</a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">Contacts</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-l sm:font-bold text-gray-100">
-                Latest Post
-            </h3>
-            <ul class="py-4 sm:text-sm pt-4 text-gray-400">
-                <li class="pb-1">
-                    <a href="/">Why we love Tech</a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">Why we love design</a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">Why to use Laravel</a>
-                </li>
-                <li class="pb-1">
-                    <a href="/">Why php</a>
+                    <a href="/aboutus">About us</a>
                 </li>
             </ul>
         </div>
