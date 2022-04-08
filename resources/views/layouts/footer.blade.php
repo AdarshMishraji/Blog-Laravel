@@ -22,10 +22,9 @@
                     @endif
                 @else
                     <li class="pb-1">
-                        <span>{{ Auth::user()->name }}</span>
-                        <a href="{{ route('logout') }}" class="no-underline hover:underline"
-                            onclick="event.preventDefault();
-                                                                                                                                    document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        <span>{{ Auth::user()->name }} | </span>
+                        <a href="{{ route('logout') }}" class="no-underline hover:underline" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             {{ csrf_field() }}
                         </form>
@@ -39,6 +38,6 @@
         </div>
     </div>
     <p class="w-25 w-4/5 pb-3 m-auto text-xs text-gray-100 pt-6">
-        Copyright 2022-2023 | Adarsh Mishra | Blog All rights reserved.
+        Copyright 2022-2023 | Adarsh Mishra | Blog
     </p>
 </footer>
